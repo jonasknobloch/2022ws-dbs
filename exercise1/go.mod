@@ -1,0 +1,17 @@
+module 2022ws-dbs-ex1
+
+go 1.19
+
+require (
+	github.com/go-gota/gota v0.12.0
+	github.com/jackc/pgx/v5 v5.1.1
+)
+
+require (
+	github.com/jackc/pgpassfile v1.0.0 // indirect
+	github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b // indirect
+	golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90 // indirect
+	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
+	golang.org/x/text v0.3.8 // indirect
+	gonum.org/v1/gonum v0.9.1 // indirect
+)

@@ -1,0 +1,6 @@
+[submodule "exercise1/modules/join-order-benchmark"]
+	path = exercise1/modules/join-order-benchmark
+	url = https://github.com/gregrahn/join-order-benchmark
+[submodule "exercise1/modules/cinemagoer"]
+	path = exercise1/modules/cinemagoer
+	url = https://github.com/cinemagoer/cinemagoer
