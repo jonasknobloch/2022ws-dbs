@@ -7,7 +7,7 @@ import (
 
 func TestFOREncoding(t *testing.T) {
 	input := []int32{1, 3, 7, 12, 13, 13, 14, 17}
-	output := FOR(input)
+	output := FOR(input, 2)
 
 	fmt.Println(countBits(input), input)
 	fmt.Println(countBits(output), output)

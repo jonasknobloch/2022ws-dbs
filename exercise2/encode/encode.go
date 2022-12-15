@@ -20,33 +20,32 @@ func countBits(src []int32) int {
 }
 
 // https://doi.org/10.1109/ICDE.1998.655800
-func FOR(src []int32) []int32 {
-	// min, max := src[0], src[0]
-	//
-	// for _, v := range src {
-	// 	if v < min {
-	// 		min = v
-	// 	}
-	//
-	// 	if v > max {
-	// 		max = v
-	// 	}
-	// }
-	//
-	// offset := max - min
+func FOR(src []int32, frameSize int) []int32 {
+	min := func(src []int32) int32 {
+		min := src[0]
 
-	min := src[0]
-
-	for _, v := range src {
-		if v < min {
-			min = v
+		for _, v := range src {
+			if v < min {
+				min = v
+			}
 		}
+
+		return min
+	}
+
+	if len(src)%frameSize != 0 {
+		panic("invalid frame size")
 	}
 
 	dst := make([]int32, len(src))
 
-	for i, v := range src {
-		dst[i] = v - min
+	for i := 0; i < len(src); i += frameSize {
+		frame := src[i : i+frameSize]
+		delta := min(frame)
+
+		for j, v := range frame {
+			dst[i+j] = v - delta
+		}
 	}
 
 	return dst
