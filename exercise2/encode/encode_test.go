@@ -20,3 +20,11 @@ func TestDeltaEncoding(t *testing.T) {
 	fmt.Println(countBits(input), input)
 	fmt.Println(countBits(output), output)
 }
+
+func TestDictionaryEncoding(t *testing.T) {
+	input := []int32{1, 3, 7, 12, 13, 13, 14, 17}
+	output := Dictionary(input)
+
+	fmt.Println(countBits(input), input)
+	fmt.Println(countBits(output), output)
+}
